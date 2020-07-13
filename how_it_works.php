@@ -25,8 +25,8 @@
                 <li><a href="#">Login</a></li>
                  <li><a href="https://www.old.tripworld.earth/BETASIGNUP/">Registration</a></li>
                  <li><a href="how_it_works.php">How It Works</a></li>
-                <li><a href="">Our Promise</a></li>
-                 <li><a href="">Our Partnership</a></li>
+                <li><a href="our_promise.php">Our Promise</a></li>
+                 <li><a href="our_partnership.php">Our Partnership</a></li>
                 <li><a href="faqs.php">FAQ</a></li>
                     <li><a href="contact_us.php">Contact</a></li>
                 <li><a href="policy.php">Privacy Policy</a></li>

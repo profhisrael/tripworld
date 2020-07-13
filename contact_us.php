@@ -30,12 +30,17 @@
         	<div class="navClose"><img src="images/close.png" alt=""></div>
         	<div class="navLogo"><img src="images/mobLogo.png" alt=""></div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-            	<li><a href="faqs.php">FAQ</a></li>
-                <li><a href="contact_us.php">Contact</a></li>
-                <li><a href="policy.php">Privacy Policy</a></li>
+                 <li><a href="index.html">Home</a></li>
+            	
+            
                 <li><a href="#">Login</a></li>
-                 <li><a href="https://www.tripworld.earth/betasignup/">Registration</a></li>
+                 <li><a href="https://www.old.tripworld.earth/BETASIGNUP/">Registration</a></li>
+                 <li><a href="how_it_works.php">How It Works</a></li>
+                <li><a href="our_promise.php">Our Promise</a></li>
+                 <li><a href="our_partnership.php">Our Partnership</a></li>
+                <li><a href="faqs.php">FAQ</a></li>
+                    <li><a href="contact_us.php">Contact</a></li>
+                <li><a href="policy.php">Privacy Policy</a></li>
             </ul>
         </div>
        
