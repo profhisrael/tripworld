@@ -28,12 +28,15 @@ searchBar.forEach((el) =>
       setTimeout(() => {
         postData(e.target.value)
           .then((data) => {
-            const v = data.webPages.value;
-            console.log(v);
+            const v = data.webPages.value ? data.webPages.value : [];
+            console.log(data);
             if (v.length > 0) {
               modalControl(modal).open();
               const result = v
-                .map((elm) => `<div class="sug_result">${elm.name}</div>`)
+                .map(
+                  (elm) =>
+                    `<a href="https://www.bing.com/search?q=${elm.name}"  target="_blank" class="sug_result">${elm.name}</a>`
+                )
                 .join('');
               modal.forEach((x) => {
                 x.innerHTML = result;
@@ -41,18 +44,15 @@ searchBar.forEach((el) =>
             }
           })
           .catch((e) => console.log(e));
-      }, 100);
+      }, 2000);
     }
   })
 );
-
-// api call
 
 // control modal
 function modalControl(el) {
   return {
     open: () => {
-      console.log(Array.isArray(el));
       el.forEach((elem) => {
         if (elem.classList.contains('display_none')) {
           elem.classList.remove('display_none');
@@ -68,18 +68,23 @@ function modalControl(el) {
     },
   };
 }
+// api call
 
 async function postData(q) {
   if (q < 1) return;
-  const response = await fetch(
-    `https://api.cognitive.microsoft.com/bingcustomsearch/v7.0/search?q=${q}&customconfig=ae7157cd-7677-47cf-a83b-37e388fe6257`,
-    {
-      method: 'GET', // *GET, POST, PUT, DELETE, etc.
-      headers: {
-        'Content-Type': 'application/json',
-        'Ocp-Apim-Subscription-Key': 'c88513fa3e0e4c4190e34074e247d33c',
-      },
-    }
-  );
-  return response.json(); // parses JSON response into native JavaScript objects
+  try {
+    const response = await fetch(
+      `https://api.cognitive.microsoft.com/bingcustomsearch/v7.0/search?q=${q}&customconfig=ae7157cd-7677-47cf-a83b-37e388fe6257`,
+      {
+        method: 'GET', // *GET, POST, PUT, DELETE, etc.
+        headers: {
+          'Content-Type': 'application/json',
+          'Ocp-Apim-Subscription-Key': 'c88513fa3e0e4c4190e34074e247d33c',
+        },
+      }
+    );
+    return response.json(); // parses JSON response into native JavaScript objects
+  } catch (e) {
+    console.log(e);
+  }
 }
