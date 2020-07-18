@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>::-COntact Us-::</title>
+<title>::-Contact Us-::</title>
 
 <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -32,13 +32,13 @@
             <ul>
                  <li><a href="index.html">Home</a></li>
             	
-            
+            <hr>
                 <li><a href="#">Login</a></li>
-                 <li><a href="https://www.old.tripworld.earth/BETASIGNUP/">Registration</a></li>
+                 <li><a href="https://www.old.tripworld.earth/BETASIGNUP/">Registration</a></li><hr>
                  <li><a href="how_it_works.php">How It Works</a></li>
                 <li><a href="our_promise.php">Our Promise</a></li>
-                 <li><a href="our_partnership.php">Our Partnership</a></li>
-                <li><a href="faqs.php">FAQ</a></li>
+                 <li><a href="our_partnership.php">Our Partnership</a></li><hr>
+                <li><a href="faqs.php">FAQ</a></li><hr>
                     <li><a href="contact_us.php">Contact</a></li>
                 <li><a href="policy.php">Privacy Policy</a></li>
             </ul>
