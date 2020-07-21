@@ -36,7 +36,7 @@ searchBar.forEach((el) =>
               const result = v
                 .map(
                   (elm) =>
-                    `<a href="https://www.bing.com/search?q=${elm.name}"  target="_blank" class="sug_result">${elm.name}</a>`
+                    `<a href="https://www.bing.com/search?q=${elm.name}"  class="sug_result">${elm.name}</a>`
                 )
                 .join('');
               modal.forEach((x) => {
@@ -92,7 +92,7 @@ async function postData(q) {
 function search(e) {
   e.preventDefault();
   const { query } = getFormData(e.target);
-  window.open(`https://www.bing.com/search?q=${query}`, '_blank');
+  window.location = `https://www.bing.com/search?q=${query}`;
 }
 
 function getFormData(form) {
