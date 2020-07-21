@@ -18,6 +18,8 @@ const searchBar = [
   ...[...document.querySelectorAll('.search1')],
 ];
 const modal = [...document.querySelectorAll('.suggestions')];
+const forms = [...document.querySelectorAll('form')];
+forms.forEach((form) => form.addEventListener('submit', (e) => search(e)));
 
 // event on input
 searchBar.forEach((el) =>
@@ -29,7 +31,6 @@ searchBar.forEach((el) =>
         postData(e.target.value)
           .then((data) => {
             const v = data.webPages.value ? data.webPages.value : [];
-            console.log(data);
             if (v.length > 0) {
               modalControl(modal).open();
               const result = v
@@ -87,4 +88,20 @@ async function postData(q) {
   } catch (e) {
     console.log(e);
   }
+}
+function search(e) {
+  e.preventDefault();
+  const { query } = getFormData(e.target);
+  window.open(`https://www.bing.com/search?q=${query}`, '_blank');
+}
+
+function getFormData(form) {
+  let reqBody = {};
+  Object.keys(form.elements).forEach((key) => {
+    let element = form.elements[key];
+    if (element.type !== 'submit') {
+      reqBody[element.name] = element.value;
+    }
+  });
+  return reqBody;
 }
