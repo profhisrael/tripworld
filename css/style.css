@@ -101,10 +101,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f8e31', end
 .footerSocial ul li a img{ height:22px;}
 .footerBot{ background:#27a83c; padding:10px; text-align:center; color:#fff;}
 
-.mobNav{  display: flex; flex-direction: column;align-items: flex-end;     margin-top: 30px; margin-bottom: /*10*/0px;}
+.mobNav{  display: flex; flex-direction: column;align-items: flex-end;     margin-top: 10px; margin-bottom: /*10*/0px;}
 .mobNav span{ display:block; width:40px; height:6px; background:#a1a1a0; margin:5px 0;     border-radius: 10px;}
-.mobLogo{ max-width:90%; margin:0 auto; padding-top:-100%;} 
-.mobileView .homeSearchForm{ width:100%; margin-top: -20px;}
+.mobLogo{ max-width:90%; margin:0 auto; padding-top:-150px;} 
+.mobileView .homeSearchForm{ width:100%; margin-top: -50px;}
 .mobileView .homeSearchForm input[type="text"]{    box-shadow: 0 0 21px 5px #D9D9D9; border-style: solid; border-color: green;
   border-width: 1px;     -webkit-box-shadow: 0 0 21px 5px #D9D9D9;}
 
